@@ -451,7 +451,7 @@
     </div>
 
     <div class="timer-display">
-        ⏱️ Masa: <span id="timer">30</span>s
+        ⏱️ Masa: <span id="timer">60</span>s
     </div>
     
     <div class="game-controls">
@@ -481,7 +481,7 @@ const words = [
         let wordSpawnInterval;
         let gameWords = [...words];
         let currentFloatingWords = [];
-        let timer = 30;
+        let timer = 60;
 let timerInterval;
 let eatenWords = [];
 
@@ -514,7 +514,7 @@ let eatenWords = [];
             spawnWord();
             wordSpawnInterval = setInterval(spawnWord, 2000);
 
-            timer = 30;
+            timer = 60;
 document.getElementById('timer').textContent = timer;
 
 timerInterval = setInterval(() => {
@@ -546,7 +546,7 @@ function endGameByTime() {
     gameOverScreen.className = 'game-over';
     gameOverScreen.innerHTML = `
         <h2>⌛ Masa Tamat!</h2>
-        <p>Permainan berakhir selepas 30 saat.</p>
+        <p>Permainan berakhir selepas 60 saat.</p>
 <p>Skor Akhir: <strong>${score}/20</strong></p>
 <p>Perkataan yang dimakan:</p>
 <div style="display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px;">
@@ -673,7 +673,7 @@ function endGameByTime() {
 
             
 if (timerInterval) clearInterval(timerInterval);
-document.getElementById('timer').textContent = '30';
+document.getElementById('timer').textContent = '60';
 
 
             // Clear intervals
